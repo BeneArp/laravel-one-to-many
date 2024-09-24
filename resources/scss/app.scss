@@ -18,5 +18,7 @@ ul{
 
 .page-content{
     overflow: auto;
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+    scrollbar-width: none;
 }

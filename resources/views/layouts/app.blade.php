@@ -29,7 +29,10 @@
         @include('admin.partials.header')
 
         <div class="wrapper d-flex">
-            @include('admin.partials.sidebar')
+
+            @auth()
+                @include('admin.partials.sidebar')
+            @endauth
 
             <div class="page-content p-3">
                 @yield('content')
