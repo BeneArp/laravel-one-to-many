@@ -1,0 +1,22 @@
+@use 'partials/header';
+@use 'partials/sidebar';
+@import '~bootstrap/scss/bootstrap';
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.wrapper{
+    height: calc(100vh - 50px);
+    overflow: hidden;
+}
+
+.page-content{
+    overflow: auto;
+    width: 100%;
+}
