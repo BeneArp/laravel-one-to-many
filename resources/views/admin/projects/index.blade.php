@@ -11,6 +11,7 @@
         <th scope="col">Descrizione</th>
         <th scope="col">Data Inizio</th>
         <th scope="col">Data fine</th>
+        <th scope="col">Tipo</th>
         <th scope="col">Azioni</th>
       </tr>
     </thead>
@@ -24,6 +25,7 @@
                 <td>{{$project->description}}</td>
                 <td>{{ ($project->start_date )->format('d/m/Y') }}</td>
                 <td>{{ ($project->end_date)->format('d/m/Y') }}</td>
+                <td>{{ ($project->type->name) }}</td>
                 <td>
                     <a href="{{route('projects.show', $project)}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
                     <a href="{{route('projects.edit', $project)}}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
