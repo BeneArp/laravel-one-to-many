@@ -29,9 +29,6 @@
                     @endforeach
 
                   </select>
-                @error('type_id')
-                  <small class="invalid-feedback">{{$message}}</small>
-                @enderror
             </div>
 
             <div class="mb-3">
