@@ -8,7 +8,7 @@
 
     <div>
 
-        <form action="{{route('projects.store')}}" method="POST">
+        <form action="{{route('admin.projects.store')}}" method="POST">
             @csrf
 
             <div class="mb-3">

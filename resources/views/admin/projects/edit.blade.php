@@ -8,7 +8,7 @@
 
     <div>
 
-        <form action="{{ route('projects.update', $project) }}" method="POST">
+        <form action="{{ route('admin.projects.update', $project) }}" method="POST">
             @csrf
 
             @method('PUT')

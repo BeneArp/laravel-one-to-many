@@ -44,7 +44,7 @@ class ProjectController extends Controller
         $new_project->fill($data);
         $new_project->save();
 
-        return redirect()->route('projects.show', $new_project);
+        return redirect()->route('admin.projects.show', $new_project);
     }
 
     /**
@@ -81,7 +81,7 @@ class ProjectController extends Controller
         $update_project->fill($data);
         $update_project->save();
 
-        return redirect()->route('projects.show', $update_project);
+        return redirect()->route('admin.projects.show', $update_project);
     }
 
     /**
@@ -93,6 +93,6 @@ class ProjectController extends Controller
 
         $project->delete();
 
-        return redirect()->route('projects.index');
+        return redirect()->route('admin.projects.index');
     }
 }

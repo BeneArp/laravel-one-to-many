@@ -30,6 +30,7 @@ Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->group(function(){
         Route::get('/', [DashboardController::class, 'index'])->name('home');
+        Route::resource('projects', ProjectController::class);
     });
 
 
@@ -39,6 +40,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('projects', ProjectController::class);
+
 
 require __DIR__.'/auth.php';

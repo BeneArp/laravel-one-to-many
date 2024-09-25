@@ -27,10 +27,10 @@
                 <td>{{ ($project->end_date)->format('d/m/Y') }}</td>
                 <td>{{ ($project->type ? $project->type->name : '-') }}</td>
                 <td>
-                    <a href="{{route('projects.show', $project)}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
-                    <a href="{{route('projects.edit', $project)}}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                    <a href="{{route('admin.projects.show', $project)}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
+                    <a href="{{route('admin.projects.edit', $project)}}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
 
-                    <form action="{{route('projects.destroy', $project)}}" method="POST" onsubmit=" return confirm('Sei sicuro di voler eliminare il progetto {{$project->title}}?')">
+                    <form action="{{route('admin.projects.destroy', $project)}}" method="POST" onsubmit=" return confirm('Sei sicuro di voler eliminare il progetto {{$project->title}}?')">
                         @csrf
                         @method('DELETE')
 
